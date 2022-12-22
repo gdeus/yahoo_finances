@@ -20,6 +20,14 @@ class PercentsPage extends StatelessWidget {
                     DataColumn(
                       label: Expanded(
                         child: Text(
+                          'Dia',
+                          style: TextStyle(fontStyle: FontStyle.italic),
+                        ),
+                      ),
+                    ),
+                    DataColumn(
+                      label: Expanded(
+                        child: Text(
                           'Data',
                           style: TextStyle(fontStyle: FontStyle.italic),
                         ),
@@ -28,15 +36,7 @@ class PercentsPage extends StatelessWidget {
                     DataColumn(
                       label: Expanded(
                         child: Text(
-                          'Percentual',
-                          style: TextStyle(fontStyle: FontStyle.italic),
-                        ),
-                      ),
-                    ),
-                    DataColumn(
-                      label: Expanded(
-                        child: Text(
-                          'Percentual',
+                          'Valor',
                           style: TextStyle(fontStyle: FontStyle.italic),
                         ),
                       ),
