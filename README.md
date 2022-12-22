@@ -1,5 +1,11 @@
 # yahoo_finances
 
+# prints
+![image](https://user-images.githubusercontent.com/13950034/209238646-b46a105d-c565-4787-96a1-c72d3012e49d.png)
+![image](https://user-images.githubusercontent.com/13950034/209238670-7d924975-5aa9-422b-90da-0b5f827614ed.png)
+![image](https://user-images.githubusercontent.com/13950034/209238745-f60e1f70-9960-43a4-bbb5-c1aa3db61018.png)
+
+
 A new Flutter project.
 
 ## Getting Started
