@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:yahoo_variance_finance_app/presenter/chart_page.dart';
+import 'package:yahoo_variance_finance_app/presenter/home_page.dart';
 import 'package:yahoo_variance_finance_app/presenter/percents_page.dart';
 
 void main() {
   runApp(GetMaterialApp(
     initialRoute: '/',
     getPages: [
-      GetPage(name: '/', page: () => const App()),
+      GetPage(name: '/', page: () => HomePage()),
       GetPage(name: '/chart', page: () => ChartPage()),
       GetPage(name: '/table', page: () => const PercentsPage()),
     ],

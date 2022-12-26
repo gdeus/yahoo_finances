@@ -8,13 +8,17 @@ class PercentsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Controller controller = Get.put(Controller());
+    MainController controller = Get.put(MainController());
     controller.getData();
+
     return Scaffold(
         appBar: AppBar(
           title: const Text('Percentuais Ativos'),
         ),
         body: Obx(() => SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
               child: DataTable(
                   columns: const <DataColumn>[
                     DataColumn(
@@ -41,19 +45,43 @@ class PercentsPage extends StatelessWidget {
                         ),
                       ),
                     ),
+                    DataColumn(
+                      label: Expanded(
+                        child: Text(
+                          'Variação diaria',
+                          style: TextStyle(fontStyle: FontStyle.italic),
+                        ),
+                      ),
+                    ),
+                    DataColumn(
+                      label: Expanded(
+                        child: Text(
+                          'Variação ao 1º dia',
+                          style: TextStyle(fontStyle: FontStyle.italic),
+                        ),
+                      ),
+                    ),
                   ],
                   rows: controller.values
-                      .map((e) => DataRow(
+                      .map((value) => DataRow(
                             cells: <DataCell>[
-                              DataCell(Text(e.day.toString())),
+                              DataCell(Text((value.day + 1).toString())),
+                              DataCell(Text(DateFormat('dd/MM/yyy').format(
+                                  DateTime.fromMillisecondsSinceEpoch(
+                                      value.time.toInt() * 1000)))),
                               DataCell(Text(
-                                  '${DateFormat('dd/MM/yyy').format(DateTime.fromMillisecondsSinceEpoch(e.time * 1000))}')),
-                              DataCell(Text('${e.value.toDouble().roundToDouble()}')),
-                              
-                          
+                                  'R\$ ${value.value.toStringAsFixed(2)}')),
+                              DataCell(value.day != 0
+                                  ? Text(
+                                      '${value.percentage.toStringAsFixed(1)}%')
+                                  : const Text('-')),
+                              DataCell(value.day != 0
+                                  ? Text(
+                                      '${value.percentaged1.toStringAsFixed(1)}%')
+                                  : const Text('-')),
                             ],
                           ))
                       .toList()),
-            )));
+            ))));
   }
 }
