@@ -11,6 +11,8 @@ class MainController extends GetxController {
   List<ItemDropdown> itemsDropdown = [
     ItemDropdown('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEtINZv4pizOQGuqMipQ-N9fLxGQO7rU0mwUuqDQ37yQ&s', 'Nubank', 'NU'),
     ItemDropdown('https://seeklogo.com/images/P/Petrobras-logo-03DABEE0AC-seeklogo.com.png', 'Petrobras', 'PETR4.SA'),
+    ItemDropdown('https://i.pinimg.com/736x/9b/73/bd/9b73bd6461829fa63c4c366ffd2f19cf.jpg', 'Vale', 'VALE'),
+    ItemDropdown('https://files.tecnoblog.net/wp-content/uploads/2020/11/apple-logo.jpg', 'Apple', 'AAPL'),
   ];
   Rxn<ItemDropdown> dropdownValue = Rxn<ItemDropdown>();
   RxBool loading = false.obs;
