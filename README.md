@@ -1,13 +1,10 @@
 # yahoo_finances
 
 ### Prints
-![image](https://user-images.githubusercontent.com/13950034/209497753-eb1ccafe-8b27-481b-a540-3150b4a9261b.png)
-![image](https://user-images.githubusercontent.com/13950034/209497764-ffee7f57-cd6a-4a68-86b4-9a8cd0d0fec5.png)
-![image](https://user-images.githubusercontent.com/13950034/209497872-6fbf5cf1-cddc-4cc0-b8f8-a9800dc3cecd.png)
-![image](https://user-images.githubusercontent.com/13950034/209497909-e506b53e-0626-443f-82cc-512a6c1e9ac2.png)
-
-
-
+![image](https://user-images.githubusercontent.com/13950034/209562224-e9b1a9bb-e9c6-4242-b5c4-82b9b8e77506.png)
+![image](https://user-images.githubusercontent.com/13950034/209562240-01128e43-96bb-4121-9e9b-a721a43d7f81.png)
+![image](https://user-images.githubusercontent.com/13950034/209562264-9407d878-a363-488b-9273-0abc7114a2e6.png)
+![image](https://user-images.githubusercontent.com/13950034/209562276-61044c85-6b58-4ce6-84bb-4df87070d6a1.png)
 
 
 A new Flutter project.
