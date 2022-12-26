@@ -14,6 +14,7 @@ class PercentsPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Percentuais Ativos'),
+          backgroundColor: Colors.greenAccent,
         ),
         body: Obx(() => SingleChildScrollView(
             scrollDirection: Axis.horizontal,

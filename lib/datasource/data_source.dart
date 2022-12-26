@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:http/http.dart' as http;
+import 'package:dio/dio.dart';
 import 'package:yahoo_variance_finance_app/models/data.dart';
 
 class DataTransform {
@@ -27,11 +27,11 @@ class DataTransform {
 
 class DataSource {
   static Future<DataTransform> fetchData(String company) async {
-    final response = await http.get(Uri.parse(
-        'https://query2.finance.yahoo.com/v8/finance/chart/$company?period1=1669075200&period2=1671667200&useYfid=true&interval=1d&includePrePost=true&events=div%7Csplit%7Cearn&lang=en-US&region=US&crumb=xjqacEZLRQZ'));
+    var dio = Dio();
+    final response = await dio.get('https://query2.finance.yahoo.com/v8/finance/chart/$company?period1=1669075200&period2=1671667200&useYfid=true&interval=1d&includePrePost=true&events=div%7Csplit%7Cearn&lang=en-US&region=US&crumb=xjqacEZLRQZ');
 
     if (response.statusCode == 200) {
-      return DataTransform.fromJson(jsonDecode(response.body));
+      return DataTransform.fromJson(response.data);
     } else {
       throw Exception('Failed to load Data');
     }
